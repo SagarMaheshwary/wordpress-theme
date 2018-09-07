@@ -1,0 +1,240 @@
+/*
+Theme Name: WP Bootstrap
+Theme URI: http://github.com/SagarMaheshwary/wordpress-theme
+Author: Sagar Maheshwary
+Author URI: http://github.com/SagarMaheshwary
+Description: This is a wordpress theme that uses Bootstrap-css framework.
+Version: 1.0
+License: MIT
+License URI: https://opensource.org/licenses/MIT
+Tags: theme , new design, bootstrap-css
+Text Domain: WPBootstrap
+*/
+
+body, h3, h4, h5, h6, p{
+    padding: 0;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Sticky footer START */
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background: #f6f6f6;
+}
+
+main {
+    flex: 1 0 auto !important;
+}
+/* Sticky footer END */
+
+.container{
+    width: 85%;
+}
+
+h3{
+    font-size: 3rem;
+}
+
+p{
+    font-size: 1.1rem;
+    margin: 0 !important;
+}
+
+h4{
+    font-size: 1.7rem;
+}
+
+section{
+    margin-bottom: 3rem !important;
+}
+
+#showcase{
+    background: url('./images/showcase.png') no-repeat center;
+    height: 500px;
+    background-size: cover;
+    color: #eeeeee;
+    text-align: center;
+    padding: 0 !important;
+}
+
+.dark-overlay {
+    margin: 0 !important;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 500px;
+    padding: 4rem 1rem 0 1rem;
+}
+
+#showcase h3,p{
+    margin:1.5rem;
+}
+
+.btn-showcase{
+    border-radius: 1.9rem;
+    width: 150px;
+    margin-top: 1rem;
+}
+
+#boxes{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.box{
+    padding: 1.5rem;
+    border: #e0e0e0 1px solid;
+    margin-bottom: 2rem;
+}
+
+.box .fa{
+    font-size: 4rem;
+    margin: 1rem;
+}
+
+.box h4 , .box p{
+    padding: .5rem 0;
+}
+
+#newsletter {
+    text-align: center;
+}
+
+#newsletter h5{
+    margin:2rem 0;
+}
+
+.subscribe-form{
+    display: flex;
+    justify-content: center;
+}
+
+.subscribe-form input{
+    outline: none;
+    padding:.6rem;
+    padding-right: 112px;
+    border: solid 2px #e0e0e0;
+    border-radius: .3rem;
+    width: 450px;
+}
+
+.subscribe-form button{
+    position: relative;
+    margin-left: -100px;
+}
+
+footer p{
+    margin-left: 0 !important;
+    padding: 1rem 0;
+}
+
+footer ul{
+    margin: 1rem 0;
+    padding: .4rem 0;
+}
+
+footer li{
+    padding: .1rem;
+}
+
+.post{
+    position: relative;
+    margin: 0 0 15rem 0;
+    height: 300px;
+}
+
+.post img{
+    width: 100%;
+    height: 300px;
+}
+
+.post-body{
+    background: #fff;
+    position: absolute;
+    top: 35%;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding: 1.4rem;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.2), 0 1px 5px 0 rgba(0,0,0,0.12);
+    border-radius: 6px;
+}
+
+.post-date{
+    padding:.5rem .1rem;
+    font-size: .9rem;
+}
+
+.single-post-img img{
+    width: 100%;
+    border: #e0e0e0 1px solid;
+}
+
+.grey-text-1{
+    color: #757575 !important;
+}
+
+.grey-text-2{
+    color: #616161 !important;
+}
+
+.post-link{
+    padding: 1rem .1rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+ul{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+li{
+    list-style: none;
+}
+
+.sidebar-module li, .sidebar-module h4{
+    text-align:center;
+}
+
+.comment{
+    list-style: none;
+}
+
+.comment-meta{
+    font-size: .95rem;
+    padding-bottom:.5rem;
+}
+
+.reply{
+    padding: 1rem 0;
+    border-bottom:1px solid #e0e0e0;
+    margin-bottom:1rem;
+}
+
+.sidebar-module{
+    padding-bottom:2rem;
+}
+
+.btn{
+    cursor: pointer;
+}
+
+.post-content p{
+    font-size: 1rem !important;
+}
+
+/* Media Queries */
+@media only screen and (max-width : 602px) {
+    .post-body{
+        top:10%;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .post{
+        margin-bottom: 15rem;
+    }
+}
