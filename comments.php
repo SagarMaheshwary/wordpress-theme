@@ -1,4 +1,14 @@
 <?php 
+    
+    /**
+     * This is our custom comments template that will
+     * provide comments functionality in a post.
+     */
+
+    /**
+     * arguments for comments list
+     * @var array
+     */
     $args = array(
         'walker'            => null,
         'max_depth'         => '',
@@ -17,7 +27,11 @@
     );
 
 
-    // Comments Fields
+    /**
+     * Name field for Comment box.
+     * 
+     * @var string
+     */
     $name_field =   '<div class="form-group">' .
                             '<p class="comment-form-author">' . 
                                 '<label for="author">' . __( 'Name' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
@@ -25,6 +39,11 @@
                            '</p>' .
                     '</div>';
 
+    /**
+     * Email field for Comment box.
+     * 
+     * @var string
+     */
     $email_field =  '<div class="form-group">' .
                         '<p class="comment-form-email">'.
                             '<label for="email">' . __( 'Email' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
@@ -32,6 +51,11 @@
                         '</p>'.
                     '</div>';
     
+    /**
+     * URL field for Comment box.
+     * 
+     * @var string
+     */
     $url_field =    '<div class="form-group">' .
                         '<p class="comment-form-url">'.
                             '<label for="url">' . __( 'Website' ) . '</label> ' .
@@ -39,12 +63,20 @@
                         '</p>'.
                     '</div>';
 
-    $comment_args = array(
-        'fields'               =>   array(
+
+    /**
+     * Arguments for post comment box.
+     * 
+     * @var array
+     */
+    $comment_args = [
+        //Comment box fields
+        'fields'               =>   [
                                         $name_field,
                                         $email_field,
                                         $url_field
-                                    ),
+                                        ],
+        //Comment field
         'comment_field'        =>   '<div class="form-group mt-3">
                                         <textarea id="comment" placeholder="Your comment!" class="form-control" name="comment" rows="5" maxlength="65525" aria-required="true" required="required"></textarea>
                                     </div>',
@@ -83,14 +115,20 @@
         'submit_button'        => '<button name="%1$s" type="submit" id="%2$s" class="%3$s" value="%4$s">%4$s</button>',
         'submit_field'         => '<p class="form-submit">%1$s %2$s</p>',
         'format'               => 'xhtml',
-    );
+    ];
 
 ?>
 
 <div class="comments-section">
     <h3 class="text-center post-title grey-text-2">Comments</h3>
-    <?php wp_list_comments($args,$comments) ?>
+    <?php 
+        //show comments list.
+        wp_list_comments($args,$comments)
+    ?>
     <div class="my-5">
-        <?php comment_form($comment_args) ?>
+        <?php
+            //show comment form
+            comment_form($comment_args)
+        ?>
     </div>
 </div>

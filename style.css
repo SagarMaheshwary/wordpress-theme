@@ -65,15 +65,14 @@ section{
     background: rgba(0, 0, 0, 0.4);
     width: 100%;
     height: 500px;
-    padding: 4rem 1rem 0 1rem;
+    padding: 6rem 1rem 0 1rem;
 }
 
 #showcase h3,p{
     margin:1.5rem;
 }
 
-.btn-showcase{
-    border-radius: 1.9rem;
+#btn-showcase{
     width: 150px;
     margin-top: 1rem;
 }
@@ -91,7 +90,7 @@ section{
 }
 
 .box .fa{
-    font-size: 4rem;
+    font-size: 3rem;
     margin: 1rem;
 }
 
@@ -121,7 +120,7 @@ section{
     width: 450px;
 }
 
-.subscribe-form button{
+#btn-newsletter{
     position: relative;
     margin-left: -100px;
 }
@@ -232,6 +231,10 @@ li{
         top:10%;
         margin-left: 1rem;
         margin-right: 1rem;
+    }
+
+    .dark-overlay{
+        padding-top: 4rem;
     }
 
     .post{

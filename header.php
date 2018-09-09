@@ -20,7 +20,9 @@
 
     <nav class="navbar navbar-expand-md bg-light navbar-light">
         <div class="container">
-            <a href="<?php echo esc_url(home_url('/')) ?>" class="navbar-brand"><?php bloginfo('name') ?></a>
+            <a href="<?php echo esc_url(home_url('/')) ?>" class="navbar-brand">
+                <?php echo get_theme_mod('logo_text','WP Bootstrap') ?>
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu">
                 <span class="navbar-toggler-icon"></span>
             </button>

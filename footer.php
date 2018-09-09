@@ -1,4 +1,10 @@
-    <?php if(!is_front_page()): ?>
+    <?php
+        /**
+         * if it's not a front page then,
+         * show sidebar widget.
+         */
+        if(!is_front_page()):
+    ?>
                 </div>
                 <div class="col-lg-4 sidebar-module pt-5">
                     <?php if(is_active_sidebar('sidebar')): ?>
@@ -17,6 +23,11 @@
 <script src="<?php bloginfo('template_url') ?>/js/popper.min.js"></script>
 <script src="<?php bloginfo('template_url') ?>/js/bootstrap.min.js"></script>
 
-<?php wp_footer() ?>
+<?php
+    /**
+     * this hook will inject code that plugins or wordpress uses. 
+     */
+    wp_footer()
+?>
 </body>
 </html>
