@@ -122,7 +122,9 @@ section{
 
 #btn-newsletter{
     position: relative;
-    margin-left: -100px;
+    margin-left: -95px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
 footer p{
@@ -145,6 +147,10 @@ footer li{
     height: 300px;
 }
 
+.post-aside, .post-gallery{
+    margin-bottom: 10rem;
+}
+
 .post img{
     width: 100%;
     height: 300px;
@@ -157,8 +163,11 @@ footer li{
     margin-left: 2rem;
     margin-right: 2rem;
     padding: 1.4rem;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.2), 0 1px 5px 0 rgba(0,0,0,0.12);
     border-radius: 6px;
+}
+
+.box-shadow{
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.2), 0 1px 5px 0 rgba(0,0,0,0.12);
 }
 
 .post-date{
@@ -168,7 +177,17 @@ footer li{
 
 .single-post-img img{
     width: 100%;
+    height: auto;
     border: #e0e0e0 1px solid;
+}
+
+.post-gallery{
+    border: #e0e0e0 1px solid;
+}
+
+.post-gallery-body img , .post-gallery-body img{
+    width: 150px;
+    margin: 5px;
 }
 
 .grey-text-1{
@@ -228,7 +247,7 @@ li{
 /* Media Queries */
 @media only screen and (max-width : 602px) {
     .post-body{
-        top:10%;
+        top:20%;
         margin-left: 1rem;
         margin-right: 1rem;
     }
@@ -240,4 +259,16 @@ li{
     .post{
         margin-bottom: 15rem;
     }
-}
+
+    .post-gallery-single .gallery , .post-gallery .gallery{
+        display: flex;
+        flex-flow: column !important;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: stretch;
+    }
+
+    .post-gallery-body img, .post-gallery-body img{
+        width: 250px;
+    }
+}   

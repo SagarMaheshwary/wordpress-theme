@@ -16,6 +16,12 @@
         register_nav_menus([
             'primary' => __('Primary Menu')
         ]);
+
+        //Post format
+        add_theme_support('post-formats',[
+            'aside',
+            'gallery'
+        ]);
     }
 
     /**
